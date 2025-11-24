@@ -3,13 +3,13 @@ from pathlib import Path
 def search_in_file(file_path, keywords):
     """
     Повертає список ключових слів, які зустрічаються у файлі.
-    Якщо файл прочитати не вдалося — повертає порожній список.
+    Якщо файл прочитати не вдалося, то повертає порожній список.
     """
     try:
         with open(file_path, "r", encoding="utf-8", errors="ignore") as file:
             content = file.read().lower()
     except OSError as e:
-        print(f"[ERROR] Не вдалося прочитати файл {file_path}: {e}")
+        print(f"[ERROR] Could not read file {file_path}: {e}")
         return []
 
     found = []

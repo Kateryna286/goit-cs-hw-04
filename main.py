@@ -14,9 +14,9 @@ NUM_PROCESSES = 4
 
 
 def print_results(title, results):
-    print(f"\n[{title}] Результати:")
+    print(f"\n[{title}] Results:")
     for keyword, files in results.items():
-        print(f"'{keyword}' знайдено в {len(files)} файлах:")
+        print(f"'{keyword}' found in {len(files)} files:")
         for f in files:
             print(f"  - {f}")
 
@@ -29,11 +29,11 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     if not file_paths:
-        print("Немає файлів для аналізу.")
+        print("No files to analyze")
         raise SystemExit(0)
 
-    print(f"Файлів для аналізу: {len(file_paths)}")
-    print(f"Ключові слова: {KEYWORDS}")
+    print(f"Number of files for analysis: {len(file_paths)}")
+    print(f"Keywords: {KEYWORDS}")
 
     print()
 

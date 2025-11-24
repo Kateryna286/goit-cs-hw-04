@@ -61,6 +61,6 @@ def main_multiprocessing(file_paths, keywords, num_processes=4):
         p.join()
 
     elapsed = timeit.default_timer() - start_time
-    print(f"[MULTIPROCESSING] Час виконання: {elapsed:.4f} сек")
+    print(f"[MULTIPROCESSING] Execution time: {elapsed:.4f} sec")
 
     return dict(results)

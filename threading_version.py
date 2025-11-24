@@ -52,6 +52,6 @@ def main_threading(file_paths, keywords, num_threads=4):
         thread.join()
 
     elapsed = timeit.default_timer() - start_time
-    print(f"[THREADING] Час виконання: {elapsed:.4f} сек")
+    print(f"[THREADING] Execution time: {elapsed:.4f} sec")
 
     return dict(results)
